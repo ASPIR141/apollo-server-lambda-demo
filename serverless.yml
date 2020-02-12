@@ -1,0 +1,30 @@
+service: apollo-server-lambda
+
+plugins:
+  # Note: the serverless-plugin-typescript is needed when in dev environment and doing manual sls deploy -v
+  - serverless-plugin-typescript
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  versionFunctions: false
+  environment:
+    AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
+    RESERVATIONS_TABLE_NAME: 'Reservations'
+
+functions:
+  reservations:
+    handler: src/reservations.handler
+    events:
+      - http:
+          method: get
+          path: /reservations
+      - http:
+          path: graphql
+          method: post
+          cors: true
+      - http:
+          path: graphql
+          method: get
+

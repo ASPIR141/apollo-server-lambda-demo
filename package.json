@@ -1,0 +1,26 @@
+{
+  "name": "apollo-server-lambda-demo",
+  "version": "0.0.1",
+  "main": "server.ts",
+  "author": "v.branitsky@outlook.com",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "sls offline start",
+    "lint": "node_modules/.bin/tslint --fix -c tslint.json 'src/**/*.ts'"
+  },
+  "dependencies": {
+    "apollo-server-lambda": "^2.10.0",
+    "aws-sdk": "^2.610.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.2",
+    "@types/node": "^13.7.0",
+    "jest": "^25.1.0",
+    "serverless": "^1.63.0",
+    "serverless-offline": "^5.12.1",
+    "serverless-plugin-typescript": "^1.1.9",
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.2"
+  }
+}
