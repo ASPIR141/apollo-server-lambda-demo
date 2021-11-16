@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "apollo-server-lambda": "^2.10.0",
-    "aws-sdk": "^2.610.0"
+    "aws-sdk": "^2.814.0"
   },
   "devDependencies": {
     "@types/jest": "^25.1.2",
